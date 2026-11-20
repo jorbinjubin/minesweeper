@@ -60,8 +60,8 @@ public class Display {
     public static void printBoard(Game g, Screen sc, int cX, int cY) {
         char[][] board = g.getBoard();
         TextGraphics tg = sc.newTextGraphics();
-        for(int i = 0; i < g.h; i++) {
-            for(int j = 0; j < g.w; j++) {
+        for(int i = 0; i < g.rows; i++) {
+            for(int j = 0; j < g.cols; j++) {
                 if(j == cX && i == cY) {
                     tg.setForegroundColor(TextColor.ANSI.BLACK);
                     tg.setBackgroundColor(TextColor.ANSI.WHITE);
